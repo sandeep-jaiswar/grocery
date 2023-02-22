@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.12",
     "next": "latest",
     "next-auth": "latest",
     "nodemailer": "^6",
