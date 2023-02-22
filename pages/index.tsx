@@ -5,13 +5,10 @@ import HeaderPill from "../components/header-pill/HeaderPill"
 import ShoppingList from "../components/category-card/category-card"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { MouseEvent } from "react"
 
 export default function IndexPage() {
   const router = useRouter()
-  const handleClick = (e, url) => {
-    e.preventDefault()
-    router.push(url)
-  }
   return (
     <>
       <Head>
@@ -25,12 +22,7 @@ export default function IndexPage() {
         <Grid xs={12} sm={12} md={12}>
           <ShoppingList title="Shopping List" />
         </Grid>
-        <Grid
-          xs={12}
-          sm={12}
-          md={12}
-          onClick={(e) => handleClick(e, "/popular")}
-        >
+        <Grid xs={12} sm={12} md={12}>
           <ShoppingList title="Popular" />
         </Grid>
         <Grid xs={12} sm={12} md={12}>
